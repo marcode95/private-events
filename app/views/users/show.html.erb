@@ -4,6 +4,9 @@
   <strong>Name:</strong>
   <%= @user.name %>
 </p>
+<% @creator.events.each do |event| %>
+    <%= event.title %>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

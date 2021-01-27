@@ -22,12 +22,12 @@ class UsersController < ApplicationController
   # POST /users or /users.json
   def create   
     @user = User.new(user_params) 
-    session[:user_id] = @user.id
     if @user.save
-      redirect_to '/welcome'
+      session[:user_id] = @user.id 
+      redirect_to '/login', notice: "User signed up, please log in"
     else
-      render :new
-    end
+      redirect_to new_user_path
+    end 
   end
 
   # PATCH/PUT /users/1 or /users/1.json
