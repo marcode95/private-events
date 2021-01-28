@@ -1,6 +1,8 @@
 <h1>Welcome</h1>
 <% if logged_in? %>
-  <%= link_to "New Event", new_event_path %>
+  <%= link_to "New Event", new_event_path %> <br>
+  <%= link_to "All Users", users_path %> <br>
+  <%= link_to "All Events", events_path %>
 <% else %>
   <%= button_to "Login", '/login', method: :get%>
   <%= button_to "Sign Up", '/users/new', method: :get%>
