@@ -1,3 +1,6 @@
 <%= @event.title %> <br>
 <%= @event.description %> <br>
-<%= @event.date %>
+<%= @event.date %> <br>
+<% @event.attendees.each do |attendee| %>
+  <li><%= attendee.name %></li>
+<% end %>
