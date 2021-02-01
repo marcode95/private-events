@@ -10,7 +10,9 @@
 <% end %>
 <p>Attended Events:</p>
 <% @user.attended_events.each do |event| %>
+  <% if Date.today > event.date %>
     <%= event.title %>
+  <% end %>
 <% end %>
 <br>
 <%= link_to 'Back', users_path %>

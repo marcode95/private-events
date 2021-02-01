@@ -18,13 +18,10 @@
   </div>
 
   <div>
-    <%= form.label :date %><br>
-    <%= form.text_area :date %>
-    <% @event.errors.full_messages_for(:date).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
+    <%= form.label :date %>
+    <%= form.date_field :date, class: 'form-control' %>
   </div>
-
+  
   <div>
     <%= form.submit %>
   </div>
