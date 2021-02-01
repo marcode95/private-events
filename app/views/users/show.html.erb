@@ -8,9 +8,15 @@
 <% @user.created_events.each do |event| %>
     <%= event.title %>
 <% end %>
-<p>Attended Events:</p>
+<p>Attended Past Events:</p>
 <% @user.attended_events.each do |event| %>
   <% if Date.today > event.date %>
+    <%= event.title %>
+  <% end %>
+<% end %>
+<p>Future Events to attend:</p>
+<% @user.attended_events.each do |event| %>
+  <% if Date.today < event.date %>
     <%= event.title %>
   <% end %>
 <% end %>
