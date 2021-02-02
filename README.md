@@ -4,7 +4,7 @@ Members Only is a basic rails project about efficient usage of active records. U
 
 ## Live demo
 
-🔗 [Members Only](https://protected-hollows-95386.herokuapp.com/)
+🔗 [Private Events](https://murmuring-mountain-41144.herokuapp.com/)
 
 ## Built With
 
