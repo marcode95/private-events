@@ -1,9 +1,14 @@
-<h1>Welcome</h1>
-<% if logged_in? %>
-  <%= link_to "New Event", new_event_path %> <br>
-  <%= link_to "All Users", users_path %> <br>
-  <%= link_to "All Events", events_path %>
-<% else %>
-  <%= button_to "Login", '/login', method: :get%>
-  <%= button_to "Sign Up", '/users/new', method: :get%>
-<%end%>
+<div class="card text-center mx-auto">
+  <div class="card-body">
+    <h1 class="card-title">Welcome</h1>
+    <h3 class="card-subtitle">Private Events</h3>
+    <% if logged_in? %>
+      <%= link_to "New Event", new_event_path, class: "link" %> <br>
+      <%= link_to "All Users", users_path, class: "link" %> <br>
+      <%= link_to "All Events", events_path, class: "link" %>
+    <% else %>
+      <%= button_to "Login", '/login', method: :get, class: 'btn btn-primary my-3'%>
+      <%= button_to "Sign Up", '/users/new', method: :get, class: 'btn btn-primary btn-block'%>
+    <%end%>
+  </div>
+</div>

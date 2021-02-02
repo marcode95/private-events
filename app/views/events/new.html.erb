@@ -1,28 +1,31 @@
-<h1>New Event</h1>
+<div class="card text-center mx-auto">
+  <div class="card-body">
+    <h1 class="card-title">New Event</h1>
+      <%= form_with model: @event do |form| %>
+        <div>
+          <%= form.label :title %><br>
+          <%= form.text_field :title %>
+          <% @event.errors.full_messages_for(:title).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+        </div>
 
-<%= form_with model: @event do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-    <% @event.errors.full_messages_for(:title).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+        <div>
+          <%= form.label :description %><br>
+          <%= form.text_area :description %>
+          <% @event.errors.full_messages_for(:description).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+        </div>
 
-  <div>
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
-    <% @event.errors.full_messages_for(:description).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
+        <div>
+          <%= form.label :date %>
+          <%= form.date_field :date, class: 'form-control px-5' %>
+        </div>
+        
+        <div>
+          <%= form.submit 'Create Event', class: 'btn btn-primary mt-3' %>
+        </div>
+      <% end %>
   </div>
-
-  <div>
-    <%= form.label :date %>
-    <%= form.date_field :date, class: 'form-control' %>
-  </div>
-  
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

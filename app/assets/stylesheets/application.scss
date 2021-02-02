@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap";
+
+.card {
+  width: 18rem;
+  margin-top: 200px;
+}
+
+.link {
+  line-height: 15px;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+h3 {
+  margin-top: 20px;
+}

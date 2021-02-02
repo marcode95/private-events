@@ -1,26 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="card text-center mx-auto">
+  <div class="card-body">
+    <h1 class="card-title mb-3">Users</h1>
     <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <%= user.name %>
+      <%= link_to 'Show', user, class: "link text-secondary" %>
+      <br class="mb-2">
     <% end %>
-  </tbody>
-</table>
+    <%= link_to 'Back', welcome_path, class: "link" %>
+  </div>
+</div>
 
-<br>
 
-<%= link_to 'New User', new_user_path %>

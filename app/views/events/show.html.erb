@@ -1,6 +1,18 @@
-<%= @event.title %> <br>
-<%= @event.description %> <br>
-<%= @event.date %> <br>
-<% @event.attendees.each do |attendee| %>
-  <li><%= attendee.name %></li>
-<% end %>
+<div class="card text-center mx-auto">
+  <div class="card-body">
+    <h1 class="card-title mb-3"><%= @event.title %></h1>
+      <h3>Description:</h3>
+      <%= @event.description %>
+      <h3>Date:</h3>
+      <%= @event.date %>
+      <h3>Creator:</h3>
+        <%= @event.creator.name %> 
+      <h3>Attendees:</h3>
+      <% @event.attendees.each do |attendee| %>
+        <%= attendee.name %>
+      <% end %>
+    <br>
+    <%= link_to 'Back', events_path, class: "link" %>
+  </div>
+</div>
+

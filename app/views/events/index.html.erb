@@ -1,20 +1,36 @@
-<h1>Events</h1>
-<h2>Past Events</h2>
-<ul>
-  <% @before.each do |event| %>
-    <li>
-      <%= event.title %>
-      <td><%= link_to 'Show', event %></td>
-    </li>
-  <% end %>
-</ul>
-<h2>Future Events</h2>
-<ul>
-  <% @after.each do |event| %>
-    <li>
-      <%= event.title %>
-      <td><%= link_to 'Show', event %></td>
-    </li>
-  <% end %>
-</ul>
+<div class="d-flex flex-column align-items-center">
+  <h1>Events</h1> 
+  <%= link_to 'Back', welcome_path, class: "link" %>
+</div>
+
+<div class="d-flex justify-content-around px-5">
+  <div class="card text-center">
+    <div class="card-body">
+      <h2 class="card-title mb-3">Past Events</h2>
+      <ul>
+        <% @before.each do |event| %>
+          <li>
+            <%= event.title %>
+            <td><%= link_to 'Show', event %></td>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card text-center">
+    <div class="card-body">
+      <h2 class="card-title mb-3">Future Events</h2>
+      <ul>
+        <% @after.each do |event| %>
+          <li>
+            <%= event.title %>
+            <td><%= link_to 'Show', event %></td>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
 
