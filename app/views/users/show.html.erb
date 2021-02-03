@@ -20,12 +20,10 @@
   <div class="card text-center">
     <div class="card-body">
       <h2 class="card-title mb-3">Attended Past Events</h2>
-        <% @user.attended_events.each do |event| %>
-          <% if Date.today > event.date %>
-            <%= event.title %>
-            <%= link_to 'Show', event, class: "link text-secondary" %>
-            <br class="mb-2">
-          <% end %>
+        <% @user.attended_events.before.each do |event| %>
+          <%= event.title %>
+          <%= link_to 'Show', event, class: "link text-secondary" %>
+          <br class="mb-2">
         <% end %>
     </div>
   </div>
@@ -33,12 +31,10 @@
   <div class="card text-center">
     <div class="card-body">
       <h2 class="card-title mb-3">Future Events to attend</h2>
-        <% @user.attended_events.each do |event| %>
-          <% if Date.today < event.date %>
-            <%= event.title %>
-            <%= link_to 'Show', event, class: "link text-secondary" %>
-            <br class="mb-2">
-          <% end %>
+        <% @user.attended_events.after.each do |event| %>
+          <%= event.title %>
+          <%= link_to 'Show', event, class: "link text-secondary" %>
+          <br class="mb-2">
         <% end %>
         <br>
     </div>

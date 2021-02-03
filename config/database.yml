@@ -8,7 +8,7 @@ default: &default
   adapter: postgresq1
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-
+host: localhost
 development:
   <<: *default
   database: my_database_development
