@@ -6,6 +6,7 @@ Members Only is a basic rails project about efficient usage of active records. U
 
 🔗 [Private Events](https://murmuring-mountain-41144.herokuapp.com/)
 
+
 ## Built With
 
 - Ruby -v 2.7.2
