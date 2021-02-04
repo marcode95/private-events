@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "CreateEvents", type: :feature do
+RSpec.feature 'CreateEvents', type: :feature do
   before(:each) do
     @user = User.create!(name: 'bello')
   end
@@ -18,5 +18,4 @@ RSpec.feature "CreateEvents", type: :feature do
     visit events_path
     expect(page).to have_content('house party')
   end
-
 end

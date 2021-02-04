@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
   before :each do
     @user = User.create(name: 'bello')
     @event1 = @user.created_events.create(title: 'house party', description: 'party at my place', date: '03.02.2021')
-    @event2 = @user.created_events.create(title: 'pub crawl', description: 'pub crawl in inner city', date: '10.02.2021')
+    @event2 = @user.created_events.create(title: 'pub crawl', description: 'pub crawl in city', date: '10.02.2021')
   end
 
   context 'has associations and validations' do
