@@ -6,6 +6,7 @@ Members Only is a basic rails project about efficient usage of active records. U
 
 🔗 [Private Events](https://murmuring-mountain-41144.herokuapp.com/)
 
+
 ## Built With
 
 - Ruby -v 2.7.2
@@ -27,10 +28,12 @@ Run `bundle install` to install the gems from the `Gemfile`.<br>
 **Step 4**<br>
 Run `yarn install` to install the packages from the `package.json` file.<br>
 **Step 5**<br>
-Run `rake db:migrate` to create you local database.
+Run `rake db:create` to create you local database.<br>
 **Step 6**<br>
-Run `rails serve` to start the rails server.
+Run `rake db:migrate` to create you local database.<br>
 **Step 7**<br>
+Run `rails server` to start the rails server.<br>
+**Step 8**<br>
 You can navigate to `http://localhost:3000/` to see your application running<br>
 
 ## Authors

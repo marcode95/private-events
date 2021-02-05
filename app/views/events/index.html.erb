@@ -7,12 +7,10 @@
   <div class="card text-center">
     <div class="card-body">
       <h2 class="card-title mb-3">Past Events</h2>
-      <ul>
         <% @before.each do |event| %>
-          <li>
             <%= event.title %>
-            <td><%= link_to 'Show', event %></td>
-          </li>
+            <%= link_to 'Show', event %> <br>
+            <%= attendance_form(event) %>
         <% end %>
       </ul>
     </div>
@@ -23,10 +21,9 @@
       <h2 class="card-title mb-3">Future Events</h2>
       <ul>
         <% @after.each do |event| %>
-          <li>
             <%= event.title %>
-            <td><%= link_to 'Show', event %></td>
-          </li>
+            <%= link_to 'Show', event %> <br>
+            <%= attendance_form(event) %>
         <% end %>
       </ul>
     </div>
