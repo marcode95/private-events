@@ -30,8 +30,10 @@ Run `yarn install` to install the packages from the `package.json` file.<br>
 **Step 5**<br>
 Run `rake db:migrate` to create you local database.
 **Step 6**<br>
-Run `rails serve` to start the rails server.
+Run `rake db:migrate` to create you local database.
 **Step 7**<br>
+Run `rails serve` to start the rails server.
+**Step 8**<br>
 You can navigate to `http://localhost:3000/` to see your application running<br>
 
 ## Authors

@@ -4,4 +4,10 @@ class User < ApplicationRecord
   has_many :attended_events, through: :event_attendances
 
   validates :name, presence: true
+
+  def attends? (event)
+    attended_events.map do |attended_event|
+      attended_event.id
+    end.include?(event.id)
+  end
 end
