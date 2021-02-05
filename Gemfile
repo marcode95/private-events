@@ -5,8 +5,6 @@ ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
-# sql
-gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -44,8 +42,13 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :production do
+group :development, :test do
   # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '~> 1.3'
+end
+
+group :production do
+  # Use pg as the database for Active Record
   gem 'pg', '~> 0.18.4'
 end
 
